@@ -1,0 +1,1687 @@
+.header {
+	height: 180px;
+	background-image: url(../images/header_bg.png);
+}
+
+.header .opacity {
+	height: 40px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: rgba(255,255,255,0.5);
+	box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+}
+
+.header .nav {
+	width: 1160px;
+	margin: 0 auto;
+	position: absolute;
+	left: 0;
+	right: 0;/* 把该元素设置了绝对定位，并且把 left 和 right 属性设置为 0 后，如果该元素没有设置宽度就可以适应父元素的宽度实现居中。如果该元素设置了宽度，就可以再通过设置 margin: 0 auto; 对该元素实现居中。 */
+}
+
+.header .nav .logo {
+	margin: 60px 0 0 20px;/* 这里的 margin-top 的值是从该元素上面的浮动元素的顶端开始计算的，因为该元素上面是浮动元素，该元素自己不是浮动元素，所以浮动元素占据的高度是该元素的 margin-top 的值。 */
+	clear: right;
+}
+
+.header .left {
+	float: left;
+}
+
+.header .left .list {
+
+}
+
+.header .left .list li {
+	float: left;
+}
+
+.header .left .list li a {
+	height: 40px;
+	line-height: 40px;
+	display: block;
+	text-decoration: none;
+	color: black;
+	padding: 0 18px;
+}
+
+.header .left .list li:first-child a {
+	padding: 0 18px 0 32px;
+	background: url(../images/icons.png) -910px -75px no-repeat;
+}
+
+.header .left .list li a {
+	transition: background-color 0.3s ease;
+}
+
+.header .left .list li:hover a {
+	background-color: rgba(255,255,255,0.8);
+}
+
+.header .right {
+	float: right;
+}
+
+.header .right .ks-right {
+	float: right;
+}
+
+.ks-right.head .login,
+.ks-right.head .register {
+	text-decoration: none;
+}
+
+.header .right .contribute {
+	width: 58px;
+	height: 48px;
+	background: url(../images/contribute.png) no-repeat;
+}
+
+.header .right .contribute .bute {
+	display: block;
+	line-height: 40px;
+	color: #FFF;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 5px;
+}
+
+.header .right .head {
+	width: 35px;
+	height: 40px;/* 注意：height 属性的 % 是根据当前元素的父元素的 height 属性的值确定的，强调父元素必须要设置 height 属性，子元素的 height 属性用 % 才会有效。 */
+	padding: 0 10px;
+	position: relative;
+	cursor: pointer;
+}
+
+.header .right .head .circle {
+	display: block;
+	width: 35px;
+	border-radius: 20px;
+	position: relative;
+	top: 2.5px;
+}
+
+.header .right .history a {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 14px;
+	color: black;
+	text-decoration: none;
+}
+
+.header .right .history a:hover {
+	background-color: rgba(255,255,255,0.5);
+}
+
+
+.header .search {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 390px;
+	margin: 100px auto 0;
+}
+
+.header .search input {
+	border: none;
+	background-color: rgba(255,255,255,0.8);
+	height: 35px;
+	padding: 0;
+	float: left;
+}
+
+.header .search input[type="button"] {
+	width: 78px;/* 对于 input[type="button"] 元素，padding-left 和 padding-right 的值是计算在 width 值里面的。 */
+	padding: 0 3px 0 25px;
+	border-radius: 3px;
+	margin-right: 2px;
+	cursor: pointer;
+	color: #F00078;
+	background: rgba(255,255,255,0.8) url(../images/icons.png) -658px -654px no-repeat;
+	box-shadow: 2px 0 0 rgba(0,0,0,0.1),
+				-2px 0 0 rgba(0,0,0,0.1),
+				0 2px 0 rgba(0,0,0,0.1),
+				0 -2px 0 rgba(0,0,0,0.1);
+}
+
+.header .search input[type="text"] {
+	width: 250px;
+	padding: 0 10px 0 0;
+	outline: none;
+	border-radius: 3px 0 0 3px;
+	text-indent: 10px;
+	box-shadow: -2px 0 0 rgba(0,0,0,0.1),
+				0 2px 0 rgba(0,0,0,0.1),
+				0 -2px 0 rgba(0,0,0,0.1);
+}
+
+.header .search input[type="button"]:hover,
+.header .search input[type="text"]:hover {
+	background-color: rgb(255,255,255);
+}
+
+.header .search input[type="submit"] {
+	width: 50px;
+	border-radius: 0 3px 3px 0;
+	cursor: pointer;
+	background: rgba(255,255,255,0.8) url(../images/icons.png) -650px -720px no-repeat;
+	box-shadow: 2px 0 0 rgba(0,0,0,0.1),
+				0 2px 0 rgba(0,0,0,0.1),
+				0 -2px 0 rgba(0,0,0,0.1);
+}
+
+.header .search input[type="submit"]:hover {
+	background: rgb(255,255,255) url(../images/icons.png) -715px -720px no-repeat;
+}
+
+.content {
+	width: 1160px;
+	margin: 0 auto;
+}
+
+.description {
+	margin: 15px 0;
+}
+
+.description .sort {
+	height: 44px;/* 注意：这里如果没有设置父元素的高度，还有什么方法可以防止父元素的高度塌陷吗？ */
+	margin-bottom: 10px;
+}
+
+.description .sort .sort_li {
+	float: left;
+}
+
+.description .sort .sort_li:first-child .sort_li_a {
+	background: url(../images/icons.png) -660px -1172px no-repeat;
+	padding: 0 12px 0 0;
+}
+
+.description .sort .sort_li .sort_li_a {
+	position: relative;
+	display: block;
+	height: 44px;
+	line-height: 62px;/* line-height 属性会继承。 */
+	color: black;
+	text-decoration: none;
+	padding: 0 12px;
+	margin-right: 6px;
+	/*background-color: lightgreen;*/
+}
+
+.description .sort .sort_li:last-child {
+	float: right;
+}
+
+.description .sort .sort_li:last-child .sort_li_a {
+	float: right;
+	padding: 0;
+	margin-right: 0;
+}
+
+.description .sort .sort_li:last-child .sort_li_a img {
+	display: block;
+}
+
+.description .sort .sort_li .sort_li_a span {
+	position: absolute;/* 这里用到的居中方法，是先设置绝对定位，把该元素的左边位置定位到父元素 50% 的位置，然后再通过 transform 属性的 translate 关键字把该元素沿 x轴 向左移动该元素自身宽度的 50% 的距离，然后实现居中。 */
+	left: 50%;
+	transform: translate(-50%);
+	top: 3px;
+	padding: 0 4px;
+	height: 16px;
+	line-height: 16px;
+	background-color: pink;
+	border-radius: 5px;
+	color: #FFF;
+	font-size: 0.9em;
+}
+
+.description .special {
+	background: url(../images/icons.png) -70px -1814px no-repeat;
+}
+
+.description .special:hover {
+	color: #00aeef;
+}
+
+.description .square {
+	background: url(../images/icons.png) -70px -2009px no-repeat;
+}
+
+.description .square:hover {
+	color: #00aeef;
+}
+
+.description .live {
+	background: url(../images/icons.png) -70px -1879px no-repeat;
+}
+
+.description .live:hover {
+	color: #00aeef;
+}
+
+.description .house {
+	background: url(../images/icons.png) -64px -1944px no-repeat;
+}
+
+.description .house:hover {
+	color: #00aeef;
+}
+
+.description {
+	overflow: hidden;
+}
+
+.description .left {
+	width: 440px;
+	height: 220px;
+	/*background: lightgreen;*/
+	float: left;
+}
+
+.description .carousel {
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px;
+	/* 重要注意：在这里必须要给这个元素设置 width 属性和 height 属性的值，因为虽然我们知道一个块级元素如果没有设置宽度的话，这个块级元素是会占满它的父元素的宽度的，但是如果没有设置高度并且这个块级元素里面没有内容，这个块级元素的高度就是 0(即，我们就看不到它了)。如果我们没有设置一个块级元素的高度的话，那么这个块级元素的高度是通过它里面的内容撑开的。 */
+	/* 以下就是我们可能遇到的问题： */
+	/* 如果我们没有设置一个块级元素的宽度和高度，而它里面的所有的子元素设置了绝对定位的话，那么这个块级元素的高度就会变回 0。而在这种情况下，如果这个块级元素设置了相对定位的话会出现一个问题，就是它里面所有设置了绝对定位的子元素相当于就是以一根高度是 0 的线进行定位的(因为这个块级元素的高度是 0)。而如果我们设置了这个块级元素的 overflow 属性的值是 hidden 的话，那么这个块级元素里的所有子元素就都会看不见了。虽然这个块级元素里的所有子元素设置的都是绝对定位，但是他们仍然还是这个块级元素的子元素，因为这个块级元素的高度变成了 0，所以当这个块级元素设置 overflow 属性为 hidden 的时候，它里面所有的子元素其实都是溢出的，所以这些子元素就会被隐藏，我们也就看不到了。 */
+	width: 440px;
+	height: 220px;
+}
+
+.description .opacity {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 34px;
+	background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.description .opacity .title {
+	line-height: 34px;
+	float: left;
+	margin-left: 12px;
+	color: #FFF;
+}
+
+.description .opacity .contact {
+	float: right;
+	margin-top: 8px;
+}
+
+.description .opacity .contact li {
+	float: right;
+	width: 18px;
+	height: 18px;
+	background: url(../images/icons.png) -855px -791px no-repeat;
+	margin-right: 8px;
+	cursor: pointer;
+}
+
+.description .opacity .contact li:first-child {
+	margin-right: 18px;
+}
+
+.description .opacity .contact li:hover {
+	background: url(../images/icons.png) -919px -791px no-repeat;
+}
+
+.description .right {
+	width: 700px;
+	height: 220px;
+	float: left;
+	margin-left: 20px;
+	position: relative;
+	/*background: lightpink;*/
+}
+
+.description .right .yesterday,
+.description .right .threedays,
+.description .right .week {
+	display: none;
+	position: absolute;
+	width: 700px;
+	height: 220px;
+}
+
+.description .right .threedays {
+	display: block;
+}
+
+.description .right:hover .button {
+	opacity: 1;
+}
+
+.description .right .button {
+	position: absolute;
+	width: 35px;
+	height: 60px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	cursor: pointer;
+}
+
+.description .right .button span {
+	position: relative;
+	left: 50%;/* 注意：相对定位里的 left 属性和 right 属性是相对于当前设置了相对定位的元素的位置定位的。 */
+	top: 50%;
+	transform: translate(-15%,-50%);
+	display: inline-block;
+	width: 12px;
+	font-size: 12px;
+	color: #FFF;
+	line-height: 1.5;
+}
+
+.description .right .button.left {
+	left: 0;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background: rgba(0,0,0,0.5) url(../images/icons2.png) 4px -1208px no-repeat;
+}
+
+.description .right .button.right {
+	right: 0;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background: rgba(0,0,0,0.5) url(../images/icons2.png) 23px -1260px no-repeat;
+}
+
+.description .right .button.right span {
+	transform: translate(-85%,-50%);
+}
+
+.description .right .movie {
+	float: left;
+	width: 160px;
+	height: 100px;
+	margin: 0 20px 20px 0;
+	position: relative;
+	border-radius: 3px;
+	overflow: hidden;/* 这里是设置了该元素的 border-radius 属性，因为它的子元素 img 没有设置 border-radius 属性，所以如果设置了该元素的 border-radius 属性的话而没有设置 overflow: hidden 属性的话，img 元素就会超出该元素 border-radius 属性的值之外的区域。 */
+}/**/
+
+.description .right .movie:hover {
+	cursor: pointer;
+}
+
+.description .right .movie .movie-text {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+	color: #FFF;
+	padding: 5px 0 5px 2px;
+}
+
+.spread {
+	overflow: hidden;
+	margin-bottom: 34px;
+}
+
+.spread .left {
+	width: 880px;
+	height: 204px;
+	float: left;
+	/*background-color: lightgreen;*/
+}
+
+.spread .left .title {
+	width: auto;
+	height: 44px;
+	overflow: hidden;
+	clear: right;
+	float: none;
+	margin: 0 0 10px 0;
+}
+
+.spread .left .title span {
+	float: left;
+	height: 44px;
+}
+
+.spread .left .title span:first-child {
+	padding: 0 0 0 50px;
+	background: url(../images/icons.png) -140px -75px no-repeat;
+	line-height: 44px;
+	font-size: 25px;
+}
+
+.spread .left .title a {
+	padding: 0 0 0 30px;
+	line-height: 50px;
+	font-size: 13px;
+	color: #898989;
+	text-decoration: none;
+}
+
+.spread .left .title a:hover {
+	color: #00aeef;
+}
+
+.spread .right {
+	width: 260px;
+	height: 204px;
+	float: right;
+	/*background-color: lightpink;*/
+}
+
+.spread .left .video {
+	margin-right: 20px;
+	width: 160px;
+	height: 150px;
+	float: left;
+	position: relative;
+}/**/
+
+.spread .left .video:hover {
+	cursor: pointer;
+}/**/
+
+.spread .left .video:hover .video-text {
+	color: #00aeef;
+}/**/
+
+.spread .left .video .video-text {
+	font-size: 12px;
+	line-height: 18px;
+	display: inline-block;
+	padding-top: 10px;
+}/**/
+
+.spread .left .video img {
+	border-radius: 3px;
+}/**/
+
+.spread .left .video:last-child {
+	margin-right: 0;
+}/**/
+
+.spread .right .total {
+	height: 34px;
+	line-height: 34px;
+	background-color: #e5e9ef;
+	border-radius: 3px;
+	text-align: center;
+	margin: 10px 0;
+}
+
+.spread .right img {
+	border-radius: 3px;
+}
+
+.spread .right .total a,
+.spread .right .total span {
+	font-size: 12px;
+}
+
+.spread .right .total a {
+	color: #898989;
+	text-decoration: none;
+}
+
+.spread .right .total a:hover {
+	color: #00aeef;
+}
+
+.spread .right .total span {
+	color: #b8c0cc;
+	padding: 0 10px;
+}
+
+.advertisement {
+	height: 96px;
+	margin-bottom: 20px;
+}
+
+.advertisement img {
+	border-radius: 3px;
+}
+
+.broadcast {
+	overflow: hidden;
+}
+
+.broadcast .left {
+	width: 880px;
+	height: 390px;
+	float: left;
+	/*background-color: lightgreen;*/
+}
+
+.broadcast .right {
+	width: 260px;
+	height: 390px;
+	float: left;
+	margin-left: 20px;
+	/*background-color: lightpink;*/
+}
+
+.broadcast .left .title {
+	width: 880px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 0 10px 0;
+	float: none;
+	height: 44px;
+}
+
+.broadcast .left .title span,
+.broadcast .left .title a {
+	height: 44px;
+	float: left;
+	line-height: 50px;
+	font-size: 13px;
+}
+
+.broadcast .left .title .placeholder {
+	padding: 0 0 0 50px;
+	background: url(../images/icons.png) -140px -652px no-repeat;
+}
+
+.broadcast .left .title .now {
+	line-height: 44px;
+	font-size: 25px;
+}
+
+.broadcast .left .title a {
+	text-decoration: none;
+	color: #898989;
+	margin-left: 20px;
+}
+
+.broadcast .left .title a span {
+	float: none;
+	color: #00aeef;
+}
+
+.broadcast .left .title a+a {
+	padding: 0 0 0 20px;
+	margin-left: 40px;
+	background: url(../images/icons.png) -662px -1096px no-repeat;
+	color: #707070;
+}
+
+.broadcast .left .title a+a:hover {
+	color: #00aeef;
+}
+
+.broadcast .left .title div {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	height: 20px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.broadcast .left .title .dynamics {
+	right: 72px;
+	width: 115px;
+}
+
+.broadcast .left .title .others {
+	right: 0;
+	width: 60px;
+}
+
+.broadcast .left .title .dynamics a {
+	float: none;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	margin: 0;
+	padding: 0;
+	transition: background-color ease 0.5s;
+	/*background-color: lightgreen;*/
+}
+
+.broadcast .left .title .dynamics a:hover {
+	background-color: #ccc;
+}
+
+.broadcast .left .title .dynamics a span:first-child {
+	transition: transform ease 0.5s;
+}
+
+.broadcast .left .title .dynamics a:hover span:first-child {
+	transform: rotate(360deg);
+}
+
+.broadcast .left .title .dynamics a span:first-child {
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 5px;
+	float: left;
+	background: url(../images/icons.png) -466px -85px no-repeat;
+	/*background-color: lightgreen;*/
+}
+
+.broadcast .left .title .dynamics a span:last-child {
+	width: 80px;
+	padding: 0 5px 0 0;
+	height: 20px;
+	line-height: 20px;
+	float: left;
+	color: black;
+	/*background-color: lightpink;*/
+}
+
+.broadcast .left .title .others a {
+	float: none;
+	display: block;
+	width: 40px;
+	height: 20px;
+	line-height: 20px;
+	margin: 0;
+	padding: 0 15px 0 5px;
+	text-align: center;
+	color: #555555;
+	background: url(../images/icons.png) -435px -213px no-repeat;
+	transition: background-color ease 0.5s,
+				padding ease-in-out 0.2s,
+				background-position ease 0.2s;
+	/*background-color: lightpink;*/
+}
+
+.broadcast .left .title .others a:hover {
+	background-color: #ccc;
+	padding: 0 28px 0 2px;
+	background-position: -432px -213px;
+}
+
+.broadcast .left .video {
+	width: 160px;
+	height: 150px;
+	float: left;
+	margin: 0 20px 18px 0;
+	position: relative;
+}
+
+.broadcast .left .video img {
+	border-radius: 3px;
+}
+
+.broadcast .left .video .video-text {
+	font-size: 12px;
+	line-height: 18px;
+	display: inline-block;
+	padding-top: 10px;
+}
+
+.broadcast .left .video:hover {
+	cursor: pointer;
+}
+
+.broadcast .left .video:hover .video-text {
+	color: #00aeef;
+}
+
+.broadcast .right {
+	width: 260px;
+	height: 390px;
+	/*background-color: lightgreen;*/
+}
+
+.broadcast .right .title {
+	height: 44px;
+	margin-bottom: 10px;
+	/*background-color: lightpink;*/
+}
+
+.broadcast .right .title span {
+	line-height: 44px;
+	font-size: 13px;
+	margin-right: 10px;
+	padding: 5px 0;
+}
+
+.broadcast .right .title span:hover {
+	cursor: pointer;
+	color: #00aeef;
+	border-bottom: 1px solid #00aeef;
+}
+
+.broadcast .right .carousel {
+	height: 248px;
+	margin-bottom: 20px;
+	position: relative;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.broadcast .right .carousel img {
+
+}
+
+.broadcast .right .carousel .container span {
+	height: 26px;
+	line-height: 26px;
+	background-color: rgba(0,0,0,0.5);
+	left: 0;
+	right: 0;
+	bottom: 25px;
+	position: absolute;
+	color: #FFF;
+	padding: 0 0 0 10px;
+}
+
+.broadcast .right .carousel .container span:hover {
+	cursor: pointer;
+}
+
+.broadcast .right .carousel .container ul {
+	height: 25px;
+	background-color: rgba(0,0,0,0.8);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	text-align: center;
+	display: flex;/* 设置为弹性盒。 */
+	justify-content: center;/* 先把这里的父元素 ul 设置为弹性盒，然后通过 justify-content 属性把弹性盒里的元素设置为 水平居中。 */
+	align-items: center;/* 先把这里的父元素 ul 设置为弹性盒，然后通过 align-items 属性把弹性盒里的元素设置为 垂直居中。 */
+}
+
+.broadcast .right .carousel .container ul li {
+	display: inline-block;
+	width: 10px;
+	height: 6px;
+	background-color: #FFF;
+	margin: 0 4px;
+	border-radius: 3px;
+}
+
+.broadcast .right .carousel .container ul li:hover {
+	/*background-color: #f45d8f;*/
+	cursor: pointer;
+}
+
+.broadcast .right .carousel .container ul .i1 {
+	padding: 0 22px 0 0;
+}
+
+.broadcast .right .sort {
+	height: 50px;
+	margin-bottom: 18px;
+	/*background-color: orange;*/
+}
+
+.broadcast .right .sort .photos {
+	float: left;
+}
+
+.broadcast .right .sort .videos {
+	float: right;
+}
+
+.animation {
+	overflow: hidden;
+	margin-bottom: 31px;
+}
+
+.animation .left {
+	width: 880px;
+	height: 396px;
+	/*background-color: lightgreen;*/
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+.animation .right {
+	width: 260px;
+	height: 396px;
+	/*background-color: lightpink;*/
+	float: left;
+}
+
+.animation .left .title {
+	height: 56px;
+	/*background-color: lightpink;*/
+	margin-bottom: 4px;
+}
+
+.animation .left .video {
+	width: 160px;
+	height: 150px;
+	float: left;
+	margin: 0 20px 18px 0;
+	position: relative;
+}
+
+.animation .left .video:hover {
+	cursor: pointer;
+}
+
+.animation .left .video:hover .video-text {
+	color: #00aeef;
+}
+
+.animation .left .video .video-text {
+	font-size: 12px;
+	line-height: 18px;
+	display: inline-block;
+	padding-top: 10px;
+}
+
+.animation .left .video img {
+	border-radius: 3px;
+}
+
+.animation .right .title {
+	/*background-color: lightpink;*/
+	height: 56px;
+	margin-bottom: 4px;
+}
+
+.animation .left .title {
+	position: relative;
+}
+
+.animation .left .title .middle {
+	position: relative;
+	float: left;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 4px 0;
+}
+
+.animation .left .title .animate {
+	padding: 5px 0 5px 50px;
+	font-size: 25px;
+	background: url(../images/icons.png) -140px -656px no-repeat;
+}
+
+.animation .left .title .dynamic {
+	margin-left: 20px;
+	border-bottom: 1px solid #00a1d6;
+	color: #00aeef;
+	cursor: pointer;
+}
+
+.animation .left .title .new {
+	margin-left: 10px;
+	border-bottom: 1px solid transparent;
+	cursor: pointer;
+}
+
+.animation .left .title .collect {
+	margin-left: 35px;
+	padding-left: 22px;
+	background: url(../images/icons.png) -660px -1112px no-repeat;
+	cursor: pointer;
+}
+
+.animation .left .title .collect:hover {
+	color: #00aeef;
+}
+
+.animation .left .title .others,
+.animation .left .title .dynamic2 {
+	height: 22px;
+	float: right;
+	line-height: 22px;
+}
+
+.animation .left .title .others {
+	padding: 0 22px 0 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background: url(../images/icons.png) -436px -212px no-repeat;
+}
+
+.animation .left .title .dynamic2 {
+	margin-right: 10px;
+	padding: 0 10px 0 8px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #000;
+}
+
+.animation .left .title .dynamic2 span {
+	display: inline-block;
+	height: 22px;
+	/*background: lightpink;*/
+	vertical-align: bottom;
+	/* 重要注意：inline 元素 和 inline-block 元素的 vertical-align 属性默认是按 baseline(基线) 对齐的，如果出现无法对齐的情况，我们可以把 baseline 改为 top 或 bottom。 */
+}
+
+.animation .left .title .dynamic2 .placeholder {
+	width: 22px;
+	background: url(../images/icons.png) -472px -84px no-repeat;
+}
+
+.animation .right .title .middle {
+	float: left;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.animation .right .title .rank {
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+.animation .right .title .all,
+.animation .right .title .original {
+	font-size: 12px;
+	margin-left: 10px;
+	padding: 0 0 5px 0;
+}
+
+.animation .right .title .all:hover,
+.animation .right .title .original:hover {
+	cursor: pointer;
+	color: #00aeef;
+}
+
+.animation .right .title .all {
+	border-bottom: 1px solid #00a1d6;
+}
+
+.animation .right .title .original {
+	border-bottom: 1.5px solid transparent;
+}
+
+.animation .right .title .list {
+	margin-top: 17px;
+	float: right;
+	height: 22px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 0 22px 0 6px;
+	background: url(../images/icons.png) -440px -148px no-repeat;
+}
+
+.animation .right .title .list li {
+	height: 22px;
+	line-height: 22px;
+}
+
+.animation .right .list2 li {
+	height: 18px;
+	margin-bottom: 20px;
+	line-height: 18px;
+	overflow: hidden;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+.animation .right .list2 li:first-child {
+	height: 50px;
+}
+
+.animation .right .list2 li:first-child .group {
+	vertical-align: top;
+}
+
+.animation .right .list2 li span:first-child {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	color: #FFF;
+	background-color: #b8c0cc;
+	font-weight: bold;
+	border-radius: 3px;
+	line-height: 18px;
+	text-align: center;
+	margin-right: 8px;
+}
+
+.animation .right .list2 li  span.group {
+	background-color: #f25d8e;
+}
+
+.animation .right .list2 li:first-child img {
+	width: 79px;
+	height: 50px;
+	border-radius: 3px;
+	vertical-align: top;
+	margin-right: 8px;
+}
+
+.animation .right .list2 li:first-child img+span {
+	display: inline-block;
+	height: 50px;
+	color: #000;
+	width: 147px;/* 注意：这里必须要给 width 值，因为如果 inline-block 元素里的文本内容超过了当前的行剩余的宽度的话，会从下面一行开始。 */
+}
+
+.animation .right .more {
+	height: 26px;
+	background-color: #e5e9ef;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 26px;
+	cursor: pointer;
+}
+
+.animation .right .more span {
+	display: inline-block;
+	padding-right: 20px;
+	background: url(../images/icons.png) -420px -210px no-repeat;
+}
+
+.header .nav .game {
+	position: absolute;
+	left: 0;
+	top: 48px;
+	z-index: 5;
+	background-color: #FFF;
+	width: 466px;
+	height: 256px;
+	display: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	overflow: hidden;
+}
+
+.header .nav .game .g_left {
+	float: left;
+	width: 264px;
+}
+
+.header .nav .game .g_left .up {
+	position: relative;
+	margin-bottom: 12px;
+	height: 128px;
+	cursor: pointer;
+	margin: 12px 12px 5px 12px;
+}
+
+.header .nav .game .g_left .up span {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+	color: #FFF;
+	padding: 5px 0 5px 12px;
+}
+
+.header .nav .game .g_left .down div {
+	float: left;
+	width: 64px;
+	padding: 6px 12px 16px;
+	text-align: center;
+}
+
+.header .nav .game .g_left .down div:hover {
+	background-color: #e5e9ef;
+	cursor: pointer;
+}
+
+.header .nav .game .g_left .down div:last-child {
+	margin-right: 0;
+}
+
+.header .nav .game .g_left .down div img {
+	width: 64px;
+}
+
+.header .nav .game .g_left .down div span {
+	display: inline-block;
+	padding-top: 10px;
+}
+
+.header .nav .game .g_right {
+	float: left;
+	padding: 12px 12px 0 0;
+	width: 190px;
+}
+
+.header .nav .game .g_right .up {
+	height: 29px;
+	overflow: hidden;
+	background: url(../images/index/01/05.png) no-repeat;
+	line-height: 29px;
+}
+
+.header .nav .game .g_right .up span {
+	float: right;
+	color: #00a1d6;
+	cursor: pointer;
+}
+
+.header .nav .game .g_right .down {
+	height: 202px;
+	overflow: hidden;
+}
+
+.header .nav .game .g_right .down .list2 {
+	padding-top: 6px;
+	margin-left: 6px;
+	height: 196px;
+	box-shadow: -1px 0 4px rgba(0,0,0,0.2);
+}
+
+.header .nav .game .g_right .down .list2 li {
+	height: 28px;
+	line-height: 28px;
+	padding-left: 15px;
+	font-size: 12px;
+	float: none;
+}
+
+.header .nav .game .g_right .down .list2 li:hover {
+	background-color: #e5e9ef;
+	cursor: pointer;
+}
+
+.header .left .list .gaming:hover .game{
+	display: block;
+}
+
+.header .right .head .heading {
+	width: 320px;
+	height: 309px;
+	border: 1px solid #ccc;
+	background-color: #FFF;
+	position: absolute;
+	right: 0;
+	top: 40px;
+	z-index: 1;
+	padding: 12px;
+	display: none;
+}
+
+.header .right .head:hover .heading {
+	cursor: auto;/* 注意：cursor 属性是会继承的。 */
+	display: block;
+}
+
+.header .right .head .heading .text {
+	margin-bottom: 10px;
+	height: 25px;
+	line-height: 25px;
+	color: #6d757a;
+}
+
+.header .right .head .heading .content {
+	width: 320px;
+	height: 200px;
+	position: relative;
+}
+
+.header .right .head .heading .content .word1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.header .right .head .heading .content .word2 {
+	position: absolute;
+	top: 0;
+	left: 320px;
+	display: none;
+}
+
+.header .right .head .heading .button {
+	margin: 10px 0;
+	width: 100%;/* 注意：input 元素以及 button 元素都无法通过设置绝对定位 和 left 属性为 0 和 right 属性为 0 的方法实现占满父元素的内容宽度。 */
+	padding: 10px;
+	background-color: #00a1d6;
+	text-align: center;
+	color: #FFF;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.header .right .head .heading .bottom {
+	text-align: center;
+	margin-top: 3px;
+	font-size: 12px;
+}
+
+.header .right .head .heading .bottom span:first-child {
+
+}
+
+.header .right .head .heading .bottom a:link {
+	text-decoration: none;
+}
+
+.header .right .head .heading .bottom a span {
+	color: #00a1d6;
+}
+
+.header .right .contribute .contributing {
+	position: absolute;
+	right: 0;
+	top: 40px;
+	width: 360px;
+	height: 64px;
+	overflow: hidden;
+	background-color: #FFF;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	display: none;
+}
+
+.header .right .contribute:hover .contributing {
+	display: block;
+}
+
+.header .right .contribute .contributing a {
+	float: left;
+	width: 72px;
+	height: 64px;
+	position: relative;
+	color: #f25d8e;
+	letter-spacing: 0;
+	font-size: 13px;
+	line-height: 13px;
+	text-align: center;
+}
+
+.header .right .contribute .contributing a:hover {
+	background-color: #e5e9ef;
+}
+
+.header .right .contribute .contributing a span {
+	/* 注意：这里可以把 span 设置成绝对定位的元素，但是需要注意的是绝对定位的元素是不能通过 text-align 属性进行居中的。 */
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 12px;
+}
+
+.header .right .contribute .contributing .c1 div {
+	height: 30px;
+	background: url(../images/icons.png) -508px -908px no-repeat;
+}
+
+.header .right .contribute .contributing .c2 div {
+	height: 30px;
+	background: url(../images/icons.png) -508px -971px no-repeat;
+}
+
+.header .right .contribute .contributing .c3 div {
+	height: 30px;
+	background: url(../images/icons.png) -444px -908px no-repeat;
+}
+
+.header .right .contribute .contributing .c4 div {
+	height: 30px;
+	background: url(../images/icons.png) -444px -971px no-repeat;
+}
+
+.header .right .contribute .contributing .c5 div {
+	height: 30px;
+	background: url(../images/icons.png) -444px -1740px no-repeat;
+}
+
+.description .sort .contain {
+	position: relative;
+}
+
+.description .sort .sort_li.contain:hover ul{
+	display: block;
+}
+
+.description .sort .contain ul {/* 注意：如果当前元素定位在它的祖先元素的外面的话，就别设置它的祖先元素 overflow: hidden; 属性，否则当前元素会看不到。 */
+	list-style-type: none;
+	width: 130px;
+	background-color: #FFF;
+	position: absolute;
+	left: 0;
+	top: 44px;
+	z-index: 1;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	overflow: hidden;
+	box-shadow: 1px 0 5px rgba(0,0,0,0.1), -1px 0 5px rgba(0,0,0,0.05);
+	display: none;
+}
+
+.description .sort .contain ul li {
+	background: url(../images/icons2.png) 130px -1576px no-repeat;
+	transition: background 0.2s ease;
+}
+
+.description .sort .contain ul li a {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 0 0 25px;
+	text-decoration: none;
+	background: url(../images/icons2.png) 10px -1613px no-repeat;
+	transition: background 0.2s ease, padding 0.2s ease;
+}
+
+.description .sort .contain ul li a:link {
+	color: #000;
+}
+
+.description .sort .contain ul li a:visited {
+	color: #000;
+}
+
+.description .sort .contain ul li:hover {
+	background: #e5e9ef url(../images/icons2.png) 100px -1576px no-repeat;
+}
+
+.description .sort .contain ul li:hover a {
+	padding: 0 0 0 30px;
+	background: url(../images/icons2.png) 15px -1613px no-repeat;
+}
+
+.description .right .movie .ks-movie {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 80px;
+	padding: 10px 5px;
+	background-color: rgba(0,0,0,0.6);
+	visibility: hidden;/* 注意：这里如果用的是 display: none; 属性，那么它里面的子元素的过渡效果就看不到了。 */
+}
+
+.description .right .movie .ks-movie .placeholder {
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	background: url(../images/icons.png) -1366px -880px no-repeat;
+}
+
+.description .right .movie:hover .ks-movie {
+	visibility: visible;
+}
+
+.description .right .movie:hover .movie-text {
+	display: none;
+}
+
+.description .right .movie:hover .ks-movie span {
+	opacity: 1;
+}
+
+.description .right .movie .ks-movie p {
+	color: #FFF;
+	line-height: 1.6;
+}
+
+.description .right .movie .ks-movie span {
+	position: absolute;
+	color: #FFF;
+	font-size: 12px;
+	color: #b5b5b5;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.description .right .movie .ks-movie .ks-text-one {
+	top: 60px;
+}
+
+.description .right .movie .ks-movie .ks-text-two {
+	top: 80px;
+}
+
+.spread .left .video .ks-video,
+.broadcast .left .video .ks-video,
+.animation .left .video .ks-video {
+	width: 160px;
+	height: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 3px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.spread .left .video:hover .ks-video,
+.broadcast .left .video:hover .ks-video,
+.animation .left .video:hover .ks-video {
+	opacity: 1;
+}
+
+.spread .left .video .ks-video .ks-video-text,
+.broadcast .left .video .ks-video .ks-video-text,
+.animation .left .video .ks-video .ks-video-text {
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+	color: #FFF;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	font-size: 12px;
+}
+
+.spread .left .video:hover .ks-video .ks-video-text,
+.broadcast .left .video:hover .ks-video .ks-video-text,
+.animation .left .video:hover .ks-video .ks-video-text {
+	opacity: 1;
+}
+
+.spread .left .video .ks-video .placeholder,
+.broadcast .left .video .ks-video .placeholder,
+.animation .left .video .ks-video .placeholder {
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	background: url(../images/icons.png) -1366px -880px no-repeat;
+	display: none;
+}
+
+.spread .left .video:hover .ks-video .placeholder,
+.broadcast .left .video:hover .ks-video .placeholder,
+.animation .left .video:hover .ks-video .placeholder {
+	display: block;
+}
+
+.footer {
+	height: 322px;
+	background-color: #f6f9fa;
+}
+
+.footer .ks-up-footer {
+	width: 1160px;
+	height: 112px;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+
+.footer .ks-up-footer .ks-up-left,
+.footer .ks-up-footer .ks-up-center,
+.footer .ks-up-footer .ks-up-right {
+	float: left;
+	height: 112px;
+}
+
+.footer .ks-up-footer .ks-up-left {
+	width: 400px;
+	border-right: 1px solid #e5e9ef;
+}
+
+.footer .ks-up-footer .ks-up-left .ks-up-text,
+.footer .ks-up-footer .ks-up-center .ks-up-text {
+	color: #7d7d7d;
+	margin-bottom: 15px;
+	font-size: 14px;
+}
+
+.footer .ks-up-footer .ks-up-left .ks-left,
+.footer .ks-up-footer .ks-up-center .ks-left {
+	float: left;
+	margin-right: 60px;
+}
+
+.footer .ks-up-footer .ks-up-left .ks-left p,
+.footer .ks-up-footer .ks-up-center .ks-left p {
+	font-size: 14px;
+	line-height: 2.2;
+}
+
+.footer .ks-up-footer .ks-up-left .ks-left p a,
+.footer .ks-up-footer .ks-up-center .ks-left p a {
+	text-decoration: none;
+}
+
+.footer .ks-up-footer .ks-up-left .ks-left p a:link,
+.footer .ks-up-footer .ks-up-center .ks-left p a:link,
+.footer .ks-up-footer .ks-up-left .ks-left p a:visited,
+.footer .ks-up-footer .ks-up-center .ks-left p a:visited {
+	color: #000;
+}
+
+.footer .ks-up-footer .ks-up-left .ks-left p a:hover,
+.footer .ks-up-footer .ks-up-center .ks-left p a:hover {
+	color: #00aeef;
+}
+
+.footer .ks-up-footer .ks-up-center {
+	width: 404px;
+	border-right: 1px solid #e5e9ef;
+	padding-left: 35px;
+}
+
+.footer .ks-up-footer .ks-up-right {
+	width: 319px;
+	text-align: center;
+}
+
+.footer .ks-up-footer .ks-up-right a {
+	text-decoration: none;
+}
+
+.footer .ks-up-footer .ks-up-right a:link,
+.footer .ks-up-footer .ks-up-right a:visited {
+	color: #000;
+}
+
+.footer .ks-up-footer .ks-up-right .ks-right {
+	width: 76px;
+	height: 88px;
+	display: inline-block;
+	text-align: center;
+	position: relative;
+}
+
+.footer .ks-up-footer .ks-up-right a:hover {
+	color: #00aeef;
+}
+
+.footer .ks-up-footer .ks-up-right .d1 {
+	background: url(../images/icons.png) -1016px -196px no-repeat;
+}
+
+.footer .ks-up-footer .ks-up-right .d2 {
+	background: url(../images/icons.png) -1016px -324px no-repeat;
+}
+
+.footer .ks-up-footer .ks-up-right .d3 {
+	background: url(../images/icons.png) -1016px -68px no-repeat;
+}
+
+.footer .ks-up-footer .ks-up-right .ks-right span {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 5px;
+	font-size: 13px;
+}
+
+.footer .ks-down-footer {
+	width: 1160px;
+	height: 140px;
+	padding-top: 30px;
+	margin: 0 auto;
+}
+
+.footer .ks-down-footer .ks-down-left {
+	width: 96px;
+	float: left;
+}
+
+.footer .ks-down-footer .ks-down-right {
+	padding-left: 20px;
+	width: 1044px;
+	float: left;
+}
+
+.footer .ks-down-footer .ks-down-right p {
+	color: #7d7d7d;
+	font-size: 12px;
+	line-height: 2;
+}
+
+.footer .ks-down-footer .ks-down-right .a1,
+.footer .ks-down-footer .ks-down-right .a2,
+.footer .ks-down-footer .ks-down-right .a3,
+.footer .ks-down-footer .ks-down-right .a4,
+.footer .ks-down-footer .ks-down-right .a5,
+.footer .ks-down-footer .ks-down-right .a6 {
+	text-decoration: none;
+	display: inline-block;
+}
+
+.footer .ks-down-footer .ks-down-right .a1,
+.footer .ks-down-footer .ks-down-right .a3 {
+	padding-left: 22px;
+}
+
+.footer .ks-down-footer .ks-down-right .a1:link,
+.footer .ks-down-footer .ks-down-right .a2:link,
+.footer .ks-down-footer .ks-down-right .a3:link,
+.footer .ks-down-footer .ks-down-right .a4:link,
+.footer .ks-down-footer .ks-down-right .a5:link,
+.footer .ks-down-footer .ks-down-right .a6:link {
+	color: #aaaaaa;
+	transition: color 0.2s ease;
+}
+
+.footer .ks-down-footer .ks-down-right .a1:hover,
+.footer .ks-down-footer .ks-down-right .a2:hover,
+.footer .ks-down-footer .ks-down-right .a3:hover,
+.footer .ks-down-footer .ks-down-right .a4:hover,
+.footer .ks-down-footer .ks-down-right .a5:hover,
+.footer .ks-down-footer .ks-down-right .a6:hover {
+	color: #000;
+}
+
+.footer .ks-down-footer .ks-down-right .a1 {
+	height: 16px;
+	line-height: 16px;
+	background: url(../images/register/02.png) 3.5px 0 no-repeat;
+}
+
+.footer .ks-down-footer .ks-down-right .a3 {
+	height: 20px;
+	line-height: 20px;
+	background: url(../images/register/03.png) 1px 0 no-repeat;
+}
+
+.footer .ks-down-footer .ks-down-right .a5,
+.footer .ks-down-footer .ks-down-right .a6 {
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+}
+
+.footer .ks-down-footer .ks-down-right .a6 {
+	padding-left: 20px;
+	background: url(../images/register/04.png) 2px 1px no-repeat;
+}
+
